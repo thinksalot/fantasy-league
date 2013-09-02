@@ -1,9 +1,8 @@
 import mechanize,cookielib,string
+import login
+
 # from output import *
 from BeautifulSoup import BeautifulSoup
-
-USERNAME=''
-PASSWORD=''
 
 # main site url
 SITE_MAIN='http://fantasy.premierleague.com'

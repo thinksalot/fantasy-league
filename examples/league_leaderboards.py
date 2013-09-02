@@ -11,7 +11,7 @@ except:
 
 from output import *
 
-l=FantasyLeague(fantasy.USERNAME,fantasy.PASSWORD)
+l=FantasyLeague(login.USERNAME,login.PASSWORD)
 
 # print all league leaderboards
 for league in fantasy.L_TYPES:

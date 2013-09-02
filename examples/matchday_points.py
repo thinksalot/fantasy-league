@@ -12,5 +12,5 @@ except:
 
 from output import *
 
-l=FantasyLeague(fantasy.USERNAME,fantasy.PASSWORD)
+l=FantasyLeague(login.USERNAME,login.PASSWORD)
 print_matchdayPoints(l.get_matchdayPoints())

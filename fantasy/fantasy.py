@@ -112,7 +112,7 @@ class FantasyLeague(object):
 
         result={}
         for l in L_TYPES:
-            result[l]=[]            
+            result[l]=[]
 
         # league table classes
         #
@@ -128,9 +128,15 @@ class FantasyLeague(object):
                     'global':'ismTable ismGlobalLeague'\
                     }
 
-        for leagueType in tableClasses.keys():            
-            for leagues in page.find(attrs={'class':tableClasses[leagueType]}).findAll('tr'):
-                columns=leagues.findAll('td')
+        for leagueType in tableClasses.keys():
+            leagues=page.find(attrs={'class':tableClasses[leagueType]})
+
+            # if not participating in any of the leagues
+            if leagues is None:
+                continue
+
+            for league in leagues.findAll('tr'):
+                columns=league.findAll('td')
                 if len(columns)==0:
                     continue
 
